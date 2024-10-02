@@ -1,0 +1,104 @@
+@layer reset, global, components, overrides;
+
+@import url("./reset.css") layer(reset);
+@import url("./overrides.css") layer(overrides);
+
+@layer global {
+  html {
+    /* Custom Properties */
+    --content-width: 1200px;
+
+    /* Fonts */
+    --font-display: "Gloock", system-ui;
+
+    /* Font sizes */
+    --step--1: clamp(0.7726rem, 0.81rem + -0.0499vw, 0.8rem);
+    --step-0: clamp(1rem, 0.9091rem + 0.4545vw, 1.25rem);
+    --step-1: clamp(1.25rem, 0.9691rem + 1.4045vw, 2.0225rem);
+    --step-2: clamp(1.5625rem, 0.9407rem + 3.1089vw, 3.2724rem);
+    --step-3: clamp(1.9531rem, 0.738rem + 6.0757vw, 5.2948rem);
+    --step-4: clamp(2.4414rem, 0.214rem + 11.1373vw, 8.5669rem);
+
+    /* Spacing */
+    --space-3xs: clamp(0.25rem, 0.2273rem + 0.1136vw, 0.3125rem);
+    --space-2xs: clamp(0.5rem, 0.4545rem + 0.2273vw, 0.625rem);
+    --space-xs: clamp(0.75rem, 0.6818rem + 0.3409vw, 0.9375rem);
+    --space-s: clamp(1rem, 0.9091rem + 0.4545vw, 1.25rem);
+    --space-m: clamp(1.5rem, 1.3636rem + 0.6818vw, 1.875rem);
+    --space-l: clamp(2rem, 1.8182rem + 0.9091vw, 2.5rem);
+    --space-xl: clamp(3rem, 2.7273rem + 1.3636vw, 3.75rem);
+    --space-2xl: clamp(4rem, 3.6364rem + 1.8182vw, 5rem);
+
+    /* Radius */
+    --radius-s: 12px;
+    --radius-m: 24px;
+    --radius-l: 48px;
+    --radius-max: 1000px;
+
+    /* Colors */
+    --beige: #f0e2d2;
+    --beige-darker: oklch(from var(var(--beige) calc(1 - 0.1) c h));
+    --purple: #281523;
+
+    /* Default styling */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: var(--beige);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  h1 {
+    color: var(--beige);
+    font-family: var(--font-display);
+    font-size: var(--step-4);
+    font-weight: 400;
+    line-height: 1.16;
+  }
+
+  h2 {
+    color: var(--beige);
+    font-family: var(--font-display);
+    font-size: var(--step-3);
+    font-weight: 400;
+    line-height: 1.16;
+  }
+
+  h3 {
+    color: var(--beige);
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    font-weight: 400;
+    line-height: 1.16;
+  }
+
+  h4 {
+    color: var(--beige);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    font-weight: 400;
+    line-height: 1.16;
+  }
+
+  small {
+    font-size: var(--step--1);
+  }
+
+  p {
+    max-width: 65ch;
+  }
+
+  /************* LINK + BUTTON *************/
+  a {
+    font-weight: 400;
+    color: var(--beige);
+    text-decoration: var(--beige-darker) solid 0.125rem;
+    text-underline-offset: 0.2rem;
+
+    /* &:hover {
+
+    }
+
+    &:active {
+    } */
+  }
+}
