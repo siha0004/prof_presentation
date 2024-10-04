@@ -1,0 +1,32 @@
+.flow-space {
+  --flow-space: 0.5rlh;
+
+  > * + * {
+    margin-block-start: var(--flow-space);
+  }
+
+  h2 {
+    --flow-space: 3rlh;
+  }
+  h3 {
+    --flow-space: 2rlh;
+  }
+  h4 {
+    --flow-space: 1.5rlh;
+  }
+
+  h3 + * {
+    --flow-space: 0.5rlh;
+  }
+}
+
+.dark-text {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    color: var(--purple);
+  }
+}

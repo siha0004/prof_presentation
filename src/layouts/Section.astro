@@ -1,0 +1,12 @@
+---
+const { layout = "full-bleed", theme } = Astro.props;
+---
+
+<section data-layout={layout} data-theme={theme}>
+  <slot />
+</section>
+
+<style>
+  @layer components {
+  }
+</style>

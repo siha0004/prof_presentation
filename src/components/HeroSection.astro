@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import profile from "../assets/images/profile.png";
+import HeroCard from "./HeroCard.astro";
+---
+
+<section>
+  <Image src={profile} alt="Et profilbillede af Sif" />
+  <article>
+    <h1>Hej, jeg er Sif</h1>
+    <p>Digital designer og frontendudvikler</p>
+    <p class="secondary">Jeg vil gerne blive endnu klogere på designsystemer, digitale prototyper og opbygning af responsive, dynamiske sites.</p>
+  </article>
+  <div class="stats">
+    <HeroCard icon="instagram" number="10">sites kodet</HeroCard>
+    <HeroCard icon="instagram" number="23">moodboards kodet</HeroCard>
+    <HeroCard icon="instagram" number="7">prototyper testet</HeroCard>
+  </div>
+</section>
+
+<style>
+  @layer {
+    section {
+      display: flex;
+      gap: var(--space-l);
+      flex-direction: column;
+
+      img {
+        width: 200px;
+      }
+
+      .stats {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        gap: var(--space-s);
+      }
+    }
+  }
+</style>

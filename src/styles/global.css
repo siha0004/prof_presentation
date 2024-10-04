@@ -37,7 +37,8 @@
 
     /* Colors */
     --beige: #f0e2d2;
-    --beige-darker: oklch(from var(var(--beige) calc(1 - 0.1) c h));
+    --beige-darker: #b8ada0;
+    /* --beige-darker: oklch(from var(var(--beige) calc(1 - 0.3) c h)); */
     --purple: #281523;
 
     /* Default styling */
@@ -87,11 +88,15 @@
     max-width: 65ch;
   }
 
+  .secondary {
+    color: var(--beige-darker);
+  }
+
   /************* LINK + BUTTON *************/
   a {
     font-weight: 400;
     color: var(--beige);
-    text-decoration: var(--beige-darker) solid 0.125rem;
+    text-decoration: solid var(--purple) 0.125rem;
     text-underline-offset: 0.2rem;
 
     /* &:hover {

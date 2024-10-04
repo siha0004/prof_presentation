@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { number, icon } = Astro.props;
+---
+
+<article>
+  <div class="icon">
+    <Icon name={icon} />
+  </div>
+  <div>
+    <p class="big">{number} +</p>
+    <p>
+      <slot />
+    </p>
+  </div>
+</article>
+
+<style>
+  @layer components {
+    article {
+      background: var(--beige);
+      border-radius: var(--radius-s);
+      padding: var(--space-xs) var(--space-m);
+      display: flex;
+      flex-grow: 1;
+      gap: var(--space-s);
+      align-items: center;
+
+      .icon {
+        background: var(--purple);
+        border-radius: var(--radius-max);
+        padding: var(--space-s);
+
+        > * {
+          background-color: aliceblue;
+        }
+      }
+
+      div:has(p) {
+        display: flex;
+        flex-direction: column;
+        color: var(--purple);
+      }
+    }
+
+    .big {
+      font-size: var(--step-2);
+    }
+  }
+</style>
