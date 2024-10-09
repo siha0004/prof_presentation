@@ -13,12 +13,19 @@
     --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
     /* Font sizes */
-    --step--1: clamp(0.7726rem, 0.81rem + -0.0499vw, 0.8rem);
+    /* --step--1: clamp(0.7726rem, 0.81rem + -0.0499vw, 0.8rem);
     --step-0: clamp(1rem, 0.9091rem + 0.4545vw, 1.25rem);
     --step-1: clamp(1.25rem, 0.9691rem + 1.4045vw, 2.0225rem);
     --step-2: clamp(1.5625rem, 0.9407rem + 3.1089vw, 3.2724rem);
     --step-3: clamp(1.9531rem, 0.738rem + 6.0757vw, 5.2948rem);
-    --step-4: clamp(2.4414rem, 0.214rem + 11.1373vw, 8.5669rem);
+    --step-4: clamp(2.4414rem, 0.214rem + 11.1373vw, 8.5669rem); */
+
+    --step--1: clamp(0.75rem, 0.8182rem + -0.0909vw, 0.8rem);
+    --step-0: clamp(1rem, 0.9545rem + 0.2273vw, 1.125rem);
+    --step-1: clamp(1.25rem, 1.0909rem + 0.7955vw, 1.6875rem);
+    --step-2: clamp(1.5625rem, 1.2102rem + 1.7614vw, 2.5313rem);
+    --step-3: clamp(1.9531rem, 1.2827rem + 3.3523vw, 3.7969rem);
+    --step-4: clamp(2.4414rem, 1.2582rem + 5.9162vw, 5.6953rem);
 
     /* Spacing */
     --space-3xs: clamp(0.25rem, 0.2273rem + 0.1136vw, 0.3125rem);
@@ -41,6 +48,7 @@
     --beige-darker: #b8ada0;
     /* --beige-darker: oklch(from var(var(--beige) calc(1 - 0.3) c h)); */
     --purple: #281523;
+    --accent: blueviolet;
 
     /* Default styling */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -57,7 +65,8 @@
     line-height: 1.16;
   }
 
-  h2 {
+  h2,
+  .h2 {
     color: var(--beige);
     font-family: var(--font-display);
     font-size: var(--step-3);
@@ -65,7 +74,8 @@
     line-height: 1.16;
   }
 
-  h3 {
+  h3,
+  .h3 {
     color: var(--beige);
     font-family: var(--font-display);
     font-size: var(--step-2);
@@ -73,7 +83,8 @@
     line-height: 1.16;
   }
 
-  h4 {
+  h4,
+  .h4 {
     color: var(--beige);
     font-family: var(--font-body);
     font-size: var(--step-1);
@@ -94,17 +105,21 @@
   }
 
   /************* LINK + BUTTON *************/
-  p:has(a) {
+  p > a {
     font-weight: 400;
     color: var(--beige);
-    text-decoration: solid var(--purple) 0.125rem;
-    text-underline-offset: 0.2rem;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 0.3rem;
 
-    /* &:hover {
-
+    &:hover {
+      color: var(--accent);
     }
 
-    &:active {
+    /* &:active {
     } */
+  }
+
+  section {
+    margin: 3rem 0;
   }
 }

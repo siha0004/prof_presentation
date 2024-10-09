@@ -1,18 +1,8 @@
 ---
-const { heading } = Astro.props;
+const { heading, size } = Astro.props;
 ---
 
-<article>
-  <h2>{heading}</h2>
+<article class="flow-space">
+  <h2 class={size}>{heading}</h2>
   <slot />
 </article>
-
-<style>
-  @layer components {
-    article {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-xs);
-    }
-  }
-</style>

@@ -5,17 +5,20 @@
     margin-block-start: var(--flow-space);
   }
 
-  h2 {
+  h2,
+  .h2 {
     --flow-space: 3rlh;
   }
-  h3 {
+  h3,
+  .h3 {
     --flow-space: 2rlh;
   }
   h4 {
     --flow-space: 1.5rlh;
   }
 
-  h3 + * {
+  h3 + *,
+  .h3 + * {
     --flow-space: 0.5rlh;
   }
 }
