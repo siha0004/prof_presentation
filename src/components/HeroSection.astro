@@ -5,11 +5,13 @@ import HeroCard from "./HeroCard.astro";
 ---
 
 <section>
-  <Image src={profile} alt="Et profilbillede af Sif" />
-  <article>
+  <article class="text">
+    <Image src={profile} alt="Et profilbillede af Sif" />
     <h1>Hej, jeg er Sif</h1>
-    <p>Digital designer og frontendudvikler</p>
-    <p class="secondary">Jeg vil gerne blive endnu klogere på designsystemer, digitale prototyper og opbygning af responsive, dynamiske sites.</p>
+    <div>
+      <p>Digital designer og frontendudvikler.</p>
+      <p class="secondary">Jeg vil gerne blive endnu klogere på designsystemer, digitale prototyper og opbygning af responsive, dynamiske sites.</p>
+    </div>
   </article>
   <div class="stats">
     <HeroCard icon="instagram" number="10">sites kodet</HeroCard>
@@ -19,14 +21,25 @@ import HeroCard from "./HeroCard.astro";
 </section>
 
 <style>
-  @layer {
+  @layer components {
     section {
       display: flex;
-      gap: var(--space-l);
+      gap: var(--space-xl);
       flex-direction: column;
+      margin: var(--space-xl) 0;
 
       img {
-        width: 200px;
+        width: 150px;
+      }
+
+      article:has(h1) {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+
+        p {
+          font-size: var(--step-1);
+        }
       }
 
       .stats {

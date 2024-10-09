@@ -10,6 +10,7 @@
 
     /* Fonts */
     --font-display: "Gloock", system-ui;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
     /* Font sizes */
     --step--1: clamp(0.7726rem, 0.81rem + -0.0499vw, 0.8rem);
@@ -74,7 +75,7 @@
 
   h4 {
     color: var(--beige);
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: var(--step-1);
     font-weight: 400;
     line-height: 1.16;
@@ -93,7 +94,7 @@
   }
 
   /************* LINK + BUTTON *************/
-  a {
+  p:has(a) {
     font-weight: 400;
     color: var(--beige);
     text-decoration: solid var(--purple) 0.125rem;

@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import profile from "../assets/images/profile.png";
+import Tag from "./Tag.astro";
+
+const { title, link, img, text } = Astro.props;
+---
+
+<li>
+  <article>
+    <Image src={profile} alt="Et profilbillede af Sif" />
+    <div>
+      <h4>
+        <a href={link}>Her er et projekt</a>
+      </h4>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, commodi!</p>
+      <ul role="list">
+        <Tag tag="tester" />
+      </ul>
+    </div>
+  </article>
+</li>
+
+<style>
+  @layer {
+    li {
+      flex-basis: min(20rem, 90%);
+      flex-shrink: 0;
+    }
+    article {
+      background: blueviolet;
+      border-radius: var(--radius-s);
+      position: relative;
+
+      img {
+        border-radius: var(--radius-s) var(--radius-s) 0 0;
+      }
+
+      div {
+        padding: var(--space-s);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+
+        h4 > a {
+          color: currentcolor;
+          text-decoration: none;
+
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+</style>

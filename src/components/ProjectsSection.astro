@@ -1,0 +1,22 @@
+---
+import ScrollingContainer from "../components/ScrollingContainer.astro";
+import Text from "../components/Text.astro";
+---
+
+<section>
+  <Text heading="Projekter">
+    <p>Som studerende på multimediedesign, har jeg arbejdet med digitalt design i mange afskygning, men særligt med interesse indenfor designsystemer, UX/UI design og implementering af disse.</p>
+  </Text>
+  <ScrollingContainer />
+  <p>Ved siden af mit studie er jeg co-founder af start-up’en Peer Performance. Her bidrager jeg særligt med min viden om UI/UX, designer interfacet til vores app, samt med designet og implementeringen af vores hjemmeside.</p>
+</section>
+
+<style>
+  @layer components {
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+    }
+  }
+</style>

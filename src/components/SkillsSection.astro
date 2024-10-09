@@ -1,0 +1,22 @@
+---
+import SkillsCard from "./SkillsCard.astro";
+import Text from "../components/Text.astro";
+---
+
+<section>
+  <SkillsCard />
+  <Text heading="Min tilgang">
+    <p>Jeg er altid nysgerrig på at skabe bedre systemer, lære nye metoder og udvikle min faglighed.</p>
+    <p>Jeg har stor erfaring med at arbejde i teams, og oplever at mit bedste arbejde er skabt i samarbejde med andre. Men jeg har også en stor glæde ved selv at kunne få lov til at fordybe mig, i processen.</p>
+  </Text>
+</section>
+
+<style>
+  @layer components {
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+    }
+  }
+</style>

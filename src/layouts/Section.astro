@@ -8,5 +8,10 @@ const { layout = "full-bleed", theme } = Astro.props;
 
 <style>
   @layer components {
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-m);
+    }
   }
 </style>
