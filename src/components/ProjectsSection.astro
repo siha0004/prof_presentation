@@ -1,13 +1,15 @@
 ---
 import ScrollingContainer from "../components/ScrollingContainer.astro";
 import Text from "../components/Text.astro";
+
+const { data } = Astro.props;
 ---
 
 <section>
   <Text heading="Projekter">
     <p>Som studerende på multimediedesign, har jeg arbejdet med digitalt design i mange afskygning, men særligt med interesse indenfor designsystemer, UX/UI design og implementering af disse.</p>
   </Text>
-  <ScrollingContainer />
+  <ScrollingContainer cardData={data} />
   <p>Ved siden af mit studie er jeg co-founder af start-up’en Peer Performance. Her bidrager jeg særligt med min viden om UI/UX, designer interfacet til vores app, samt med designet og implementeringen af vores hjemmeside.</p>
 </section>
 

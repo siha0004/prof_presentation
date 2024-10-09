@@ -3,10 +3,13 @@ import HeroSection from "../components/HeroSection.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
 import SkillsSection from "../components/SkillsSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const url = "https://tffrhcejgcmxtpatvfvj.supabase.co/rest/v1/my_projects/";
+const projectData = await fetch("https://raw.githubusercontent.com/siha0004/frontend-design/main/resources/json/projections.json").then((res) => res.json());
 ---
 
 <BaseLayout>
   <HeroSection />
-  <ProjectsSection />
+  <ProjectsSection data={projectData} />
   <SkillsSection />
 </BaseLayout>

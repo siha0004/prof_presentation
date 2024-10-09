@@ -1,12 +1,11 @@
 ---
 import ProjectsCard from "./ProjectsCard.astro";
+
+const { cardData } = Astro.props;
 ---
 
 <ul role="list">
-  <ProjectsCard />
-  <ProjectsCard />
-  <ProjectsCard />
-  <ProjectsCard />
+  {cardData.values.map((project) => <ProjectsCard {project} />)}
 </ul>
 
 <style>
