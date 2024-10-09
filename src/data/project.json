@@ -1,0 +1,5 @@
+[
+  { "title": "Rank", "text": "Lorem impsum dolores this jeistum irrelius hoffmeyer", "img": "rank.png", "link": "https://t10-gruppe5.netlify.app/", "tags": ["Figma", "UX/UI", "Astro"] },
+  { "title": "App design", "text": "Interfacedesign af Peer Performance beta-app. Prototype bygget i Figma, med opbyggning af komponenter fra atom-niveau til færdige pages. ", "img": "peer.png", "link": "#", "tags": ["Figma", "UX/UI"] },
+  { "title": "Vild Mad", "text": "Design af et website omkring at sanke. Site kodet med HTML, CSS og Javascript.", "img": "vildmad.png", "link": "#", "tags": ["Figma", "UX/UI", "HTML/CSS/JS"] }
+]
