@@ -5,9 +5,8 @@ const { number, icon } = Astro.props;
 ---
 
 <article>
-  <div class="icon">
-    <Icon name={icon} />
-  </div>
+  <Icon name={icon} />
+
   <div>
     <p class="big">{number} +</p>
     <p>
@@ -28,19 +27,11 @@ const { number, icon } = Astro.props;
       gap: var(--space-s);
       align-items: center;
 
-      .icon {
-        background: var(--purple);
-        border-radius: var(--radius-max);
-        padding: var(--space-s);
-
-        > * {
-          background-color: aliceblue;
-        }
+      [data-icon] {
+        max-width: 4rem;
       }
 
       div:has(p) {
-        display: flex;
-        flex-direction: column;
         color: var(--purple);
       }
     }
