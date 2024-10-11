@@ -1,26 +1,26 @@
 ---
-import ProjectsCard from "./ProjectsCard.astro";
-
 const { cardData } = Astro.props;
+
+console.log(cardData);
+
+import ProjectsCard from "../components/ProjectsCard.astro";
 ---
 
-<ul role="list">
-  {cardData.values.map((project) => <ProjectsCard {project} />)}
+<ul role="list" class="full-bleed">
+  {cardData.map((project) => <ProjectsCard {project} />)}
 </ul>
 
 <style>
-  @layer components {
-    ul {
-      display: flex;
-      gap: var(--space-m);
-      overflow-x: auto;
-      grid-column: full;
-      padding-inline: max(1rem, 50% - var(--content-width) / 2);
-      scroll-snap-type: x mandatory;
+  ul {
+    display: flex;
+    gap: var(--space-m);
+    overflow-x: auto;
+    grid-column: full;
+    padding-inline: max(1rem, 50% - var(--content-width) / 2);
+    scroll-snap-type: x mandatory;
 
-      li {
-        scroll-snap-align: center;
-      }
+    li {
+      scroll-snap-align: center;
     }
   }
 </style>

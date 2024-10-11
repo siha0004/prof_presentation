@@ -28,42 +28,40 @@ const { title, link, img, text } = project;
 </li>
 
 <style>
-  @layer {
-    li {
-      flex-basis: min(20rem, 90%);
-      flex-shrink: 0;
-    }
-    article {
-      background: var(--accent);
-      border-radius: var(--radius-s);
-      position: relative;
+  li {
+    flex-basis: min(20rem, 90%);
+    flex-shrink: 0;
+  }
+  article {
+    background: var(--accent);
+    border-radius: var(--radius-s);
+    position: relative;
 
-      img {
-        border-radius: var(--radius-s) var(--radius-s) 0 0;
+    img {
+      border-radius: var(--radius-s) var(--radius-s) 0 0;
+    }
+
+    div {
+      padding: var(--space-s);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+
+      h4 > a {
+        color: currentcolor;
+        text-decoration: none;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+        }
       }
 
-      div {
-        padding: var(--space-s);
+      ul {
         display: flex;
-        flex-direction: column;
-        gap: var(--space-xs);
-
-        h4 > a {
-          color: currentcolor;
-          text-decoration: none;
-
-          &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-          }
-        }
-
-        ul {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
+        flex-direction: row;
+        flex-wrap: wrap;
       }
     }
   }

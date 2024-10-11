@@ -3,9 +3,10 @@ import ScrollingContainer from "../components/ScrollingContainer.astro";
 import Text from "../components/Text.astro";
 
 const { data } = Astro.props;
+console.log(data);
 ---
 
-<section>
+<section class="full-bleed">
   <Text heading="Projekter" size="h2">
     <p>Som studerende på multimediedesign, har jeg arbejdet med digitalt design i mange afskygninger, men særligt med interesse indenfor designsystemer, UX/UI design og implementering af disse.</p>
   </Text>
@@ -16,11 +17,11 @@ const { data } = Astro.props;
 </section>
 
 <style>
-  @layer components {
-    section {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-m);
-    }
+  section {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: inherit;
+  }
+  @media (min-width: 600px) {
   }
 </style>
