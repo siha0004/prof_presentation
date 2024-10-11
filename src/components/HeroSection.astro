@@ -21,41 +21,39 @@ import HeroCard from "./HeroCard.astro";
 </section>
 
 <style>
-  @layer components {
-    section {
-      img {
-        max-width: calc(100vw / 2);
-      }
+  section {
+    img {
+      max-width: calc(100vw / 2);
+    }
 
+    header {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: var(--space-2xl);
+      div:has(h1) {
+        margin-block: var(--space-l) var(--space-xs);
+        h1 {
+          margin-bottom: var(--space-m);
+        }
+
+        p {
+          font-size: var(--step-1);
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      gap: var(--space-s);
+    }
+
+    @media (min-width: 600px) {
       header {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin-bottom: var(--space-2xl);
-        div:has(h1) {
-          margin-block: var(--space-l) var(--space-xs);
-          h1 {
-            margin-bottom: var(--space-m);
-          }
-
-          p {
-            font-size: var(--step-1);
-          }
-        }
-      }
-
-      .stats {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        gap: var(--space-s);
-      }
-
-      @media (min-width: 600px) {
-        header {
-          grid-template-columns: 1fr 2fr;
-          gap: var(--space-2xl);
-        }
+        grid-template-columns: 1fr 2fr;
+        gap: var(--space-2xl);
       }
     }
   }

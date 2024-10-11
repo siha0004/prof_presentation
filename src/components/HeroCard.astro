@@ -16,28 +16,26 @@ const { number, icon } = Astro.props;
 </article>
 
 <style>
-  @layer components {
-    article {
-      background: var(--beige);
-      border-radius: var(--radius-s);
-      padding: var(--space-xs) var(--space-m);
-      flex-grow: 1;
+  article {
+    background: var(--beige);
+    border-radius: var(--radius-s);
+    padding: var(--space-xs) var(--space-m);
+    flex-grow: 1;
 
-      display: flex;
-      gap: var(--space-s);
-      align-items: center;
+    display: flex;
+    gap: var(--space-s);
+    align-items: center;
 
-      [data-icon] {
-        max-width: 4rem;
-      }
-
-      div:has(p) {
-        color: var(--purple);
-      }
+    [data-icon] {
+      max-width: 4rem;
     }
 
-    .big {
-      font-size: var(--step-2);
+    div:has(p) {
+      color: var(--purple);
     }
+  }
+
+  .big {
+    font-size: var(--step-2);
   }
 </style>
