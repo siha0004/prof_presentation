@@ -1,22 +1,30 @@
 ---
-import SkillsCard from "./SkillsCard.astro";
 import Text from "../components/Text.astro";
+import SkillsTabel from "./SkillsTabel.astro";
 ---
 
 <section>
-  <SkillsCard />
   <Text heading="Min tilgang">
     <p>Jeg er altid nysgerrig på at skabe bedre systemer, lære nye metoder og udvikle min faglighed.</p>
     <p>Jeg har stor erfaring med at arbejde i teams, og oplever at mit bedste arbejde er skabt i samarbejde med andre. Men jeg har også en stor glæde ved selv at kunne få lov til at fordybe mig, i processen.</p>
   </Text>
+  <SkillsTabel />
 </section>
 
 <style>
-  @layer components {
+  section {
+    margin-block: var(--space-xl);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
+  }
+  @media (min-width: 600px) {
     section {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-m);
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-xl);
+      > :last-child {
+        order: -1;
+      }
     }
   }
 </style>

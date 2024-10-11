@@ -1,0 +1,48 @@
+---
+import SkillsCategory from "./SkillsCategory.astro";
+---
+
+<article>
+  <small>Jeg er dygtig til</small>
+  <SkillsCategory title="Programmer">
+    <li>Figma</li>
+    <li>Github</li>
+    <li>Codepen</li>
+    <li>Adobe Illustrator</li>
+  </SkillsCategory>
+  <SkillsCategory title="Sprog">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+    <li>Astro</li>
+    <li>React</li>
+  </SkillsCategory>
+  <SkillsCategory title="Metoder">
+    <li>Designsystemer</li>
+    <li>Brugertest</li>
+    <li>Projektstyring</li>
+  </SkillsCategory>
+</article>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: [title]1fr [list]auto;
+    container-type: inline-size;
+
+    small {
+      text-transform: uppercase;
+      text-align: right;
+      color: var(--beige-darker);
+      margin-bottom: var(--space-xs);
+    }
+
+    > * {
+      grid-column: 1 / -1;
+    }
+
+    &:last-child {
+      border-bottom: solid thin var(--beige-darker);
+    }
+  }
+</style>
