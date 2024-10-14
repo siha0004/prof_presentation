@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
-import vildmad from "../assets/images/vildmad.png";
 import Tag from "./Tag.astro";
 
 const { project } = Astro.props;
@@ -21,7 +20,7 @@ if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/
       </h4>
       <p>{text}</p>
       <ul role="list">
-        <Tag tag="tester" />
+        {tags.map((tag) => <Tag {tag} />)}
       </ul>
     </div>
   </article>
@@ -59,7 +58,8 @@ if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: end;
+        gap: var(--space-xs);
+        padding: 0;
       }
     }
   }
