@@ -21,6 +21,10 @@
   .h3 + * {
     --flow-space: 0.5rlh;
   }
+
+  ul {
+    --flow-space: 1.5rlh;
+  }
 }
 
 .dark-text {

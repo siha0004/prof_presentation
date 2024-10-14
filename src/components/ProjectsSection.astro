@@ -19,5 +19,13 @@ console.log(data);
     grid-column: full;
     display: grid;
     grid-template-columns: inherit;
+    row-gap: var(--space-xl);
+  }
+  @media (min-width: 600px) {
+    section {
+      small {
+        display: none;
+      }
+    }
   }
 </style>

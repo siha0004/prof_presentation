@@ -27,15 +27,8 @@ import SkillsCategory from "./SkillsCategory.astro";
 <style>
   article {
     display: grid;
-    grid-template-columns: [title]1fr [list]auto;
+    grid-template-columns: [title]auto [list]auto;
     container-type: inline-size;
-
-    small {
-      text-transform: uppercase;
-      text-align: right;
-      color: var(--beige-darker);
-      margin-bottom: var(--space-xs);
-    }
 
     > * {
       grid-column: 1 / -1;

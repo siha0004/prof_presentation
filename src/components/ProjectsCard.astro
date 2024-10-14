@@ -2,22 +2,22 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
-import profile from "../assets/images/profile.png";
+import vildmad from "../assets/images/vildmad.png";
 import Tag from "./Tag.astro";
 
 const { project } = Astro.props;
 const { title, link, img, text, tags } = project;
 
-// const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*.{jpeg,jpg,png,gif}");
-// if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/images/*.{jpeg,jpg,png,gif}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*.{jpeg,jpg,png,gif}");
+if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/images/*.{jpeg,jpg,png,gif}"`);
 ---
 
 <li>
   <article>
-    <Image src={profile} alt="Et profilbillede af Sif" />
-    <div>
+    <Image src={img} alt="Et profilbillede af Sif" alt=`${title} projekt` width="400" height="300" />
+    <div class="flow-space">
       <h4>
-        <a href={link}>{title}</a>
+        <a href={link} target="_blank">{title}</a>
       </h4>
       <p>{text}</p>
       <ul role="list">
@@ -29,11 +29,11 @@ const { title, link, img, text, tags } = project;
 
 <style>
   li {
-    flex-basis: min(20rem, 90%);
+    flex-basis: min(35rem, 90%);
     flex-shrink: 0;
   }
   article {
-    background: var(--accent);
+    background: var(--purple-lighter);
     border-radius: var(--radius-s);
     position: relative;
 
@@ -43,9 +43,6 @@ const { title, link, img, text, tags } = project;
 
     div {
       padding: var(--space-s);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-xs);
 
       h4 > a {
         color: currentcolor;
@@ -62,6 +59,7 @@ const { title, link, img, text, tags } = project;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: end;
       }
     }
   }

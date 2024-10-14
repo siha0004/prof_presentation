@@ -6,21 +6,33 @@ console.log(cardData);
 import ProjectsCard from "../components/ProjectsCard.astro";
 ---
 
-<ul role="list" class="full-bleed">
-  {cardData.map((project) => <ProjectsCard {project} />)}
-</ul>
+<article>
+  <small>Et udsnit af mine proejkter</small>
+  <ul role="list" class="full-bleed">
+    {cardData.map((project) => <ProjectsCard {project} />)}
+  </ul>
+</article>
 
 <style>
-  ul {
-    display: flex;
-    gap: var(--space-m);
-    overflow-x: auto;
+  article {
     grid-column: full;
-    padding-inline: max(1rem, 50% - var(--content-width) / 2);
-    scroll-snap-type: x mandatory;
+    display: grid;
+    grid-template-columns: inherit;
 
-    li {
-      scroll-snap-align: center;
+    small {
+      grid-column: content;
+    }
+    ul {
+      display: flex;
+      gap: var(--space-m);
+      overflow-x: auto;
+      grid-column: full;
+      padding-inline: max(1rem, 50% - var(--content-width) / 2);
+      scroll-snap-type: x mandatory;
+
+      li {
+        scroll-snap-align: center;
+      }
     }
   }
 </style>
