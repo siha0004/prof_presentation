@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import profile from "../assets/images/profile.png";
 import HeroCard from "./HeroCard.astro";
@@ -6,8 +7,9 @@ import HeroCard from "./HeroCard.astro";
 
 <section>
   <header>
-    <Image src={profile} alt="Et profilbillede af Sif" width="500/" />
+    <Image src={profile} alt="Et profilbillede af Sif" width="500" />
     <div>
+      <Icon name="code" />
       <h1>Hej, jeg er Sif</h1>
       <p>Digital designer og frontendudvikler.</p>
       <p class="secondary">Jeg vil gerne blive endnu klogere på designsystemer, digitale prototyper og opbygning af responsive, dynamiske sites.</p>
@@ -30,14 +32,28 @@ import HeroCard from "./HeroCard.astro";
       display: grid;
       grid-template-columns: 1fr;
       margin-bottom: var(--space-2xl);
+
       div:has(h1) {
         margin-block: var(--space-l) var(--space-xs);
+        position: relative;
+
         h1 {
+          position: relative;
           margin-bottom: var(--space-m);
+          z-index: 2;
         }
 
         p {
+          position: relative;
           font-size: var(--step-1);
+          z-index: 2;
+        }
+        [data-icon] {
+          position: absolute;
+          max-width: 70px;
+          right: 2px;
+          top: 60px;
+          z-index: 1;
         }
       }
     }
