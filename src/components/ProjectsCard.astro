@@ -47,11 +47,24 @@ if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/
 
     div {
       padding: var(--space-s);
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-s);
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+        padding: 0;
+      }
 
       a {
         color: currentcolor;
         text-decoration: none;
-
         &::before {
           content: "";
           position: absolute;
@@ -67,19 +80,6 @@ if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/
           color: var(--accent);
           text-decoration: solid;
         }
-      }
-
-      footer {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: var(--space-xs);
-        padding: 0;
       }
     }
   }
