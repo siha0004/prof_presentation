@@ -22,7 +22,8 @@
     --flow-space: 0.5rlh;
   }
 
-  ul {
+  ul,
+  footer {
     --flow-space: 1.5rlh;
   }
 }

@@ -15,13 +15,14 @@ if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/
   <article>
     <Image src={img} alt="Et profilbillede af Sif" alt=`${title} projekt` width="400" height="300" />
     <div class="flow-space">
-      <h4>
-        <a href={link} target="_blank">{title}</a>
-      </h4>
+      <h4>{title}</h4>
       <p>{text}</p>
-      <ul role="list">
-        {tags.map((tag) => <Tag {tag} />)}
-      </ul>
+      <footer>
+        <ul role="list">
+          {tags.map((tag) => <Tag {tag} />)}
+        </ul>
+        <a href={link} target="_blank">Se projekt</a>
+      </footer>
     </div>
   </article>
 </li>
@@ -47,15 +48,30 @@ if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/
     div {
       padding: var(--space-s);
 
-      h4 > a {
+      a {
         color: currentcolor;
         text-decoration: none;
 
-        &::after {
+        &::before {
           content: "";
           position: absolute;
           inset: 0;
         }
+
+        &::after {
+          content: " >";
+          color: var(--accent);
+        }
+
+        &:hover {
+          color: var(--accent);
+          text-decoration: solid;
+        }
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
       }
 
       ul {
