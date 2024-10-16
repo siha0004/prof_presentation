@@ -8,7 +8,7 @@ import SkillsTabel from "./SkillsTabel.astro";
 <section>
   <Text heading="Min tilgang">
     <p>Jeg er altid nysgerrig på at skabe bedre systemer, lære nye metoder og udvikle min faglighed.</p>
-    <p>Jeg har stor erfaring med at arbejde i teams, og oplever at mit bedste arbejde er skabt i samarbejde med andre. Men jeg har også en stor glæde ved selv at kunne få lov til at fordybe mig og arbejde selv i dele af processen.</p>
+    <p>Jeg har stor erfaring med at arbejde i teams, og oplever at mit bedste arbejde er skabt i samarbejde med andre. Men jeg har også en stor glæde ved selv at kunne få lov til at fordybe mig og arbejde selv, i dele af processen.</p>
   </Text>
   <SkillsTabel />
   <div class="notes">
@@ -26,6 +26,10 @@ import SkillsTabel from "./SkillsTabel.astro";
 
     .notes {
       display: none;
+    }
+
+    small {
+      margin-bottom: var(--space-xs);
     }
   }
   @media (min-width: 800px) {

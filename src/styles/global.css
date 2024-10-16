@@ -100,11 +100,11 @@
     text-transform: uppercase;
     text-align: right;
     color: var(--black-lighter);
-    margin-bottom: var(--space-xs);
   }
 
   p {
     max-width: 55ch;
+    font-size: var(--step-0);
   }
 
   .secondary {

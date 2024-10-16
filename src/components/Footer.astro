@@ -1,23 +1,47 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <footer>
   <article class="flow-space dark-text">
-    <h3>Skal vi tage en snak?</h3>
-    <p>Giv mig et kald på <span>+45 53 56 23 63</span> eller skriv en mail til <span>sif.m.hansen@gmail.com</span>.</p>
+    <h3>Vil du vide mere?</h3>
+    <p>Du kan give mig et kald på <span>+45 53 56 23 63</span> <br /> skriv en mail til <span>sif.m.hansen@gmail.com</span>. <br /> eller tjek min profil på <a href="https://www.linkedin.com/in/sif-melkane-hansen-b48a292a5/">LinkedIn</a></p>
     <p>Glæder mig til at høre fra dig!</p>
 
-    <h4>Min erfaring?</h4>
-    <p>Tjek min profil på <a href="https://www.linkedin.com/in/sif-melkane-hansen-b48a292a5/">LinkedIn</a></p>
+    <!-- <h4>Min erfaring?</h4>
+    <p>Tjek min profil på <a href="https://www.linkedin.com/in/sif-melkane-hansen-b48a292a5/">LinkedIn</a></p> -->
+    <small>© 2024 | Sif Melkane Hansen </small>
+    <Icon name="logo" />
   </article>
 </footer>
 
 <style>
   article {
+    display: grid;
     background: var(--main);
     border-radius: var(--radius-m) var(--radius-m) 0 0;
-    padding: var(--space-xl) var(--space-l);
+    padding: var(--space-xl) var(--space-xl) var(--space-m);
     margin-top: var(--space-l);
+    position: relative;
+    overflow: hidden;
 
     span {
       color: var(--accent);
+    }
+
+    small {
+      color: var(--white-75);
+      text-align: center;
+      margin-top: var(--space-xl);
+    }
+    [data-icon] {
+      display: block;
+      position: absolute;
+      max-width: 400px;
+      right: 10%;
+      top: 30px;
+      z-index: 1;
+      opacity: 70%;
     }
   }
 </style>
