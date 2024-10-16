@@ -30,9 +30,13 @@ if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/
   li {
     flex-basis: min(35rem, 90%);
     flex-shrink: 0;
+    padding: var(--space-s) 0;
   }
   article {
-    background: var(--purple-lighter);
+    background: var(--white-50);
+    box-shadow:
+      0px 1px 3px rgba(210, 210, 210, 0.8),
+      0px 4px 10px rgba(210, 210, 210, 0.8);
     border-radius: var(--radius-s);
     position: relative;
 

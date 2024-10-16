@@ -31,13 +31,10 @@ import SkillsCategory from "./SkillsCategory.astro";
     display: grid;
     grid-template-columns: [title]auto [list]auto;
     container-type: inline-size;
+    border-bottom: solid thin var(--black-300);
 
     > * {
       grid-column: 1 / -1;
-    }
-
-    &:last-child {
-      border-bottom: solid thin var(--beige-darker);
     }
   }
 </style>

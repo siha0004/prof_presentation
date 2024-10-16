@@ -17,8 +17,11 @@ const { number, icon } = Astro.props;
 
 <style>
   article {
-    background: var(--beige);
+    background: var(--white-50);
     border-radius: var(--radius-s);
+    box-shadow:
+      0px 1px 3px rgba(210, 210, 210, 0.8),
+      0px 4px 10px rgba(210, 210, 210, 0.8);
     padding: var(--space-xs) var(--space-m);
     flex-grow: 1;
 
@@ -31,11 +34,12 @@ const { number, icon } = Astro.props;
     }
 
     div:has(p) {
-      color: var(--purple);
+      color: var(--black);
     }
   }
 
   .big {
     font-size: var(--step-2);
+    color: var(--accent);
   }
 </style>
