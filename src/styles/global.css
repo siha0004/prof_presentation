@@ -109,6 +109,11 @@
     color: var(--beige-darker);
   }
 
+  .note {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+  }
+
   /************* LINK + BUTTON *************/
   p > a {
     font-weight: 400;

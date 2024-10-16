@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components";
+
 import Text from "../components/Text.astro";
 import SkillsTabel from "./SkillsTabel.astro";
 ---
@@ -9,6 +11,10 @@ import SkillsTabel from "./SkillsTabel.astro";
     <p>Jeg har stor erfaring med at arbejde i teams, og oplever at mit bedste arbejde er skabt i samarbejde med andre. Men jeg har også en stor glæde ved selv at kunne få lov til at fordybe mig, i processen.</p>
   </Text>
   <SkillsTabel />
+  <div class="notes">
+    <p class="note">Jeg er dygtig til</p>
+    <Icon name="arrow_2" />
+  </div>
 </section>
 
 <style>
@@ -16,6 +22,7 @@ import SkillsTabel from "./SkillsTabel.astro";
     margin-block: var(--space-xl);
     display: grid;
     gap: var(--space-xl);
+    position: relative;
   }
   @media (min-width: 600px) {
     section {
@@ -29,6 +36,22 @@ import SkillsTabel from "./SkillsTabel.astro";
       } */
       small {
         display: none;
+      }
+
+      .notes {
+        position: absolute;
+        left: 2%;
+        top: 100px;
+        rotate: -15deg;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        /* gap: 1rem; */
+        [data-icon] {
+          max-width: 110px;
+          rotate: 220deg;
+        }
       }
     }
   }
