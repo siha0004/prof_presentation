@@ -4,7 +4,7 @@ import ProjectsSection from "../components/ProjectsSection.astro";
 import SkillsSection from "../components/SkillsSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const url = "https://tffrhcejgcmxtpatvfvj.supabase.co/rest/v1/my_projects";
+const url = "https://tffrhcejgcmxtpatvfvj.supabase.co/rest/v1/my_projects?order=id.asc";
 // const projectData = await fetch("https://raw.githubusercontent.com/siha0004/frontend-design/main/resources/json/projections.json").then((res) => res.json());
 const projectData = await fetch(url, {
   method: "GET",

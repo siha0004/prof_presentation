@@ -22,7 +22,15 @@ const { title, link, img, text, tags } = project;
         <ul role="list">
           {tags.map((tag) => <Tag {tag} />)}
         </ul>
-        <a href={link} target="_blank">Se projekt</a>
+        {
+          link && (
+            <a href={link} target="_blank">
+              Se projekt
+            </a>
+          )
+        }
+        <!--           {data.hvid && <Color type="card" img="hvid.webp" />}
+ -->
       </footer>
     </div>
   </article>
