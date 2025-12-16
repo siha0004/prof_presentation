@@ -6,18 +6,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const url = "https://tffrhcejgcmxtpatvfvj.supabase.co/rest/v1/my_projects?order=id.asc";
 // const projectData = await fetch("https://raw.githubusercontent.com/siha0004/frontend-design/main/resources/json/projections.json").then((res) => res.json());
-const projectData = await fetch(url, {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmZnJoY2VqZ2NteHRwYXR2ZnZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgwNjg3NTEsImV4cCI6MjA0MzY0NDc1MX0.csHqTIOIfSUbv7ApQFyGHfzQ6QhJ9eAU86rmT1cL9HI",
-  },
-}).then((res) => res.json());
+// const projectData = await fetch(url, {
+//   method: "GET",
+//   headers: {
+//     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmZnJoY2VqZ2NteHRwYXR2ZnZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjgwNjg3NTEsImV4cCI6MjA0MzY0NDc1MX0.csHqTIOIfSUbv7ApQFyGHfzQ6QhJ9eAU86rmT1cL9HI",
+//   },
+// }).then((res) => res.json());
 
-console.log(projectData);
+// console.log(projectData);
 ---
 
 <BaseLayout>
   <HeroSection />
-  <ProjectsSection data={projectData} />
+  <!-- <ProjectsSection data={projectData} /> -->
+  <ProjectsSection />
   <SkillsSection />
 </BaseLayout>

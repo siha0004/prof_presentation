@@ -1,0 +1,5 @@
+[
+  { "title": "Rank", "text": "Et forslag til redesign af en keramikforhandlers hjemmeside. Opbygning af nyt designsystem og implementering af dette i frameworket Astro.", "tags": ["Figma", "UX/UI", "Astro"], "link": "https://t10-gruppe5.netlify.app/", "img": "/img/rank.webp" },
+  { "title": "App Design", "text": "Interfacedesign af Peer Performance beta-app. Prototype bygget i Figma, med opbyggning af komponenter fra atom-niveau til færdige pages.", "tags": ["Figma", "UX/UI"], "link": "", "img": "/img/peer.webp" },
+  { "title": "Vild Mad", "text": "Design af underside til et website omkring at sanke. Site kodet med vanilla HTML, CSS og Javascript.", "tags": ["Figma", "UX/UI", "HTML/CSS"], "link": "https://vild-mad-gr9.netlify.app/", "img": "/img/vildmad.webp" }
+]

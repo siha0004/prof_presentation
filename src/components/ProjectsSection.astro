@@ -3,17 +3,18 @@ import { Icon } from "astro-icon/components";
 
 import ScrollingContainer from "../components/ScrollingContainer.astro";
 import Text from "../components/Text.astro";
+import projects from "../data/projects.json";
 
-const { data } = Astro.props;
-console.log(data);
+// const { projects } = Astro.props;
+console.log(projects);
 ---
 
 <section class="full-bleed">
   <Text heading="Projekter" size="h2">
-    <p>Som studerende på multimediedesign, har jeg arbejdet med digitalt design i mange afskygninger, men særligt med interesse indenfor designsystemer, UX/UI design og implementering af disse.</p>
+    <p>Som studerende på digital konceptudvikling og med en baggrund som multimediedesigner, har jeg arbejdet med digitalt design i mange afskygninger, men særligt med interesse indenfor UX/UI design.</p>
     <p>Ved siden af mit studie er jeg co-founder af start-up’en Peer Performance. Her bidrager jeg særligt med min viden om UI/UX, designer interfacet til vores app, samt med designet og implementeringen af vores <a href="https://peer-performance.com/">hjemmeside</a>.</p>
   </Text>
-  <ScrollingContainer cardData={data} />
+  <ScrollingContainer cardData={projects} />
   <div class="notes">
     <p class="note">Et udsnit af mit arbejde</p>
     <Icon name="arrow_1" />
